@@ -61,8 +61,11 @@ Matrix * createMatrix(int r, int c) {
 
 void freeMatrix(Matrix * mat) {
   int i;
+
 	for (i=0;i < mat->r; i++)
+	{	
 		free(mat->data[i]);
+	}
 	free(mat->data);
 	free(mat);
 }

@@ -21,14 +21,14 @@ int main(int argc, char ** argv) {
 	if (x != NULL) {
 		res = backsubst(x,A,b);
 
-		printToScreen(x);
-	  freeMatrix(x);
+		printToScreen(A);
+	  //freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
 	}
 
-	freeMatrix(A);
-	freeMatrix(b);
+	//freeMatrix(A);
+	//freeMatrix(b);
 
 	return 0;
 }
