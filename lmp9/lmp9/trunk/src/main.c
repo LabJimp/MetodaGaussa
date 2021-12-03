@@ -22,13 +22,15 @@ int main(int argc, char ** argv) {
 		res = backsubst(x,A,b);
 
 		printToScreen(A);
-	  //freeMatrix(x);
+		printToScreen(b);
+		printToScreen(x);
+	  freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
 	}
 
-	//freeMatrix(A);
-	//freeMatrix(b);
+//	freeMatrix(A);
+//	freeMatrix(b);
 
 	return 0;
 }

@@ -15,16 +15,16 @@ int eliminate(Matrix *mat, Matrix *b){
 			 printf("Mathematical Error!");
 		 	 return 1;
 		 }
-		 for(j=i+1;j<mat->c;j++)
+		 for(j=i+1;j<mat->r;j++)
 		 {
 		 	ratio = (mat->data[j][i])/(mat->data[i][i]);
-	  
-			for(k=0;k<=mat->c;k++)
+			for(k=0;k<=mat->r;k++)
 			 {	
 				 (mat->data[j][k]) = (mat->data[j][k]) - ratio*(mat->data[i][k]);
-			 }
-		}
-	}
+			 }	
+		 b->data[j][0] -= ratio*(b->data[i][0]);
+		 }
+	 }
 		return 0;
 }
 

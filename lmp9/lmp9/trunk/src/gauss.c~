@@ -1,0 +1,33 @@
+#include "gauss.h"
+
+/**
+ * Zwraca 0 - elimnacja zakonczona sukcesem
+ * Zwraca 1 - macierz osobliwa - dzielenie przez 0
+ */
+int eliminate(Matrix *mat, Matrix *b){
+    /**
+  	 * Tutaj należy umieścić właściwą implemntację.
+		 */
+
+
+for(i=1;i<=n-1;i++)
+		 {
+			 		  if(a[i][i] == 0.0)
+						  		  {
+									  			   printf("Mathematical Error!");
+												   			   exit(0);
+															   		  }
+					  		  for(j=i+1;j<=n;j++)
+								  		  {
+											  			   ratio = a[j][i]/a[i][i];
+														   			   
+														   			   for(k=1;k<=n+1;k++)
+																		   			   {
+																						   			  		a[j][k] = a[j][k] - ratio*a[i][k];
+																														   }
+																	   		  }
+							  	 }
+
+		return 0;
+}
+
