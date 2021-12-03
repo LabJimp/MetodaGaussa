@@ -58,6 +58,15 @@ Matrix * createMatrix(int r, int c) {
 
 		return mat;
 }
+void diagon(Matrix * mat) {
+
+int i;
+printf("Diagonala macierzy: \n[%f",mat->data[0][0]);
+for (i=1;i<mat->r;i++)
+printf(",%f",mat->data[i][i]);
+printf("]\n");
+}
+
 
 void freeMatrix(Matrix * mat) {
   int i;
