@@ -33,7 +33,7 @@ eliminate (Matrix * mat, Matrix * b)
 	{
 	  printf ("Mathematical Error!");
 	  return 1;
-	}
+	
       for (j = i + 1; j < mat->r; j++)
 	{
 	  ratio = (mat->data[j][i]) / (mat->data[i][i]);
@@ -43,6 +43,6 @@ eliminate (Matrix * mat, Matrix * b)
 	    }
 	  b->data[j][0] -= ratio * (b->data[i][0]);
 	}
-    }
+    }}
   return 0;
 }
