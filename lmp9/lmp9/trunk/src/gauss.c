@@ -15,9 +15,10 @@ eliminate (Matrix * mat, Matrix * b)
   for (i = 0; i < mat->r; i++)
     {
       Max = i+1;
-      for (k = i + 1; k < mat->r; k++)
-	  if (fabs(mat->data[k][i]) > fabs(mat->data[Max][i]))
-	    Max = k;
+      while ((mat->r)--)
+	  if (fabs(mat->data[k][i]) > fabs(mat->data[Max][i])){
+	    printf("{%d}.",Max);
+	    Max = k;}
       if ((Max != i + 1) && (i != mat->r - 1))
 	{
 	  tmp = mat->data[i + 1];
@@ -27,6 +28,7 @@ eliminate (Matrix * mat, Matrix * b)
 	  b->data[i+1] = b->data[Max];
 	  b->data[Max] = tmp;
 	}
+      printToScreen(mat);
       if (mat->data[i][i] == 0.0)
 	{
 	  printf ("Mathematical Error!");
