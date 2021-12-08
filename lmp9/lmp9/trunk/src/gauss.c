@@ -27,8 +27,6 @@ eliminate (Matrix * mat, Matrix * b)
 	  b->data[i+1] = b->data[Max];
 	  b->data[Max] = tmp;
 	}
-      for(int f=0; f= 1000; f++)
-	      printf("");
       if (mat->data[i][i] == 0.0)
 	{
 	  printf ("Mathematical Error!");
