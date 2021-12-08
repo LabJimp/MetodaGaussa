@@ -22,8 +22,8 @@ eliminate (Matrix * mat, Matrix * b)
 	  mat->data[i + 1] = mat->data[Max];
 	  mat->data[Max] = tmp;
 	  tmpp;
-	}
-      printToScreen(mat);
+	}huj cvisfsdfsdklpfsdfnsdfjik
+      printToScreen(mat);sd
       if (mat->data[i][i] == 0.0)
 	{
 	  printf ("Mathematical Error!");
