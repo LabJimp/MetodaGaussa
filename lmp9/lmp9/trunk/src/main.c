@@ -6,29 +6,31 @@
 
 
 int main(int argc, char ** argv) {
-	int res;
 	Matrix * A = readFromFile(argv[1]);
 	Matrix * b = readFromFile(argv[2]);
 	Matrix * x;
 
 	if (A == NULL) return -1;
 	if (b == NULL) return -2;
+	printf("macierz rownan");
 	printToScreen(A);
+	printf("macierz wyrazow wolnych");
 	printToScreen(b);
 
-	res = eliminate(A,b);
+	if(eliminate(A,b))
+	exit(EXIT_FAILURE);
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
-		res = backsubst(x,A,b);
-
+		if(backsubst(x,A,b))
+		exit(EXIT_FAILURE);
+		printf("macierz po eliminacji");
 		printToScreen(A);
-		printToScreen(b);
+		printf("macierz rozwiazan");
 		printToScreen(x);
 	  freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
 	}
-	diagon(A);
 //	freeMatrix(A);
 //	freeMatrix(b);
 
