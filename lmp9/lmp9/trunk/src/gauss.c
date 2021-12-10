@@ -29,7 +29,7 @@ eliminate (Matrix * mat, Matrix * b)
 	}
       if (mat->data[i][i] == 0.0)
 	{
-	  printf ("Mathematical Error!");
+	  printf ("Mathematical Error: 0 na diagonali, dzielenie przez 0");
 	  return 1;
 	}
       for (j = i + 1; j < mat->r; j++)
