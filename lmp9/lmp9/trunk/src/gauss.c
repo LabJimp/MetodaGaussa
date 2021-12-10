@@ -21,12 +21,13 @@ eliminate (Matrix * mat, Matrix * b)
 	  tmp = mat->data[i + 1];
 	  mat->data[i + 1] = mat->data[Max];
 	  mat->data[Max] = tmp;
-	  tmpp;
-	}huj cvisfsdfsdklpfsdfnsdfjik
-      printToScreen(mat);sd
+	  tmp = b->data[i+1];
+	  b->data[i+1] = b->data[Max];
+	  b->data[Max] = tmp;
+	}
       if (mat->data[i][i] == 0.0)
 	{
-	  printf ("Mathematical Error!");
+	  printf ("Mathematical Error: 0 na diagonali, dzielenie przez 0");
 	  return 1;
       for (j = i + 1; j < mat->r; j++)
 	{
@@ -35,7 +36,7 @@ eliminate (Matrix * mat, Matrix * b)
 	    {
 	      mat->data[j][k] = mat->data[j][k] - ratio * mat->data[i][k];
 	    }
-	  b->data[j][0] -= ratio * (b->data[i][0]);
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			  b->data[j][0] -= ratio * (b->data[i][0]);
 	}
     }}
   return 0;
