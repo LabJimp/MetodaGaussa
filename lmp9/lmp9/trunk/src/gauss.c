@@ -36,7 +36,7 @@ eliminate (Matrix * mat, Matrix * b)
 	    {
 	      mat->data[j][k] = mat->data[j][k] - ratio * mat->data[i][k];
 	    }
-	  b->data[j][0] -= ratio * (b->data[i][0]);
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			  b->data[j][0] -= ratio * (b->data[i][0]);
 	}
     }}
   return 0;
