@@ -15,9 +15,7 @@ eliminate (Matrix * mat, Matrix * b)
   for (i = 0; i < mat->r; i++)
     {
       Max = i+1;
-      for (k = i + 1; k < mat->r; k++)
-	  if (fabs(mat->data[k][i]) > fabs(mat->data[Max][i]))
-	    Max = k;
+ 
       if ((Max != i + 1) && (i != mat->r - 1))
 	{
 	  tmp = mat->data[i + 1];
@@ -31,7 +29,6 @@ eliminate (Matrix * mat, Matrix * b)
 	{
 	  printf ("Mathematical Error: 0 na diagonali, dzielenie przez 0");
 	  return 1;
-	}
       for (j = i + 1; j < mat->r; j++)
 	{
 	  ratio = (mat->data[j][i]) / (mat->data[i][i]);
@@ -41,6 +38,6 @@ eliminate (Matrix * mat, Matrix * b)
 	    }
 	  b->data[j][0] -= ratio * (b->data[i][0]);
 	}
-    }
+    }}
   return 0;
 }
